@@ -1,0 +1,39 @@
+
+{% extends "layout.html" %}
+{% block body %}
+      <section>
+        <textarea><pre>
+            <code>
+                int max_of_four(int a,int b,int c,int d){
+                    if(a>b && a>c && a>d) return a;
+                    else if(b>c && b>d) return b;
+                    else if(c>d) return c;
+                    else return d;
+                    
+                }
+                int main() {
+                    int a, b, c, d;
+                    scanf("%d %d %d %d", &a, &b, &c, &d);
+                    int ans = max_of_four(a, b, c, d);
+                    printf("%d", ans);
+                    
+                    return 0;
+                }
+                
+            </code>
+        </pre></textarea>
+        <script src="https://cdn.tiny.cloud/1/255hn1mq0c0kauesd2u4t0yfucajhozuhi4jqweyuw5imt7w/tinymce/5/tinymce.min.js"></script>
+            <script>
+                tinymce.init({
+                    selector: 'textarea',
+                    height: 500,
+                    plugins: 'copy',
+                    toolbar: 'copy',
+                   
+                    
+                });
+            </script>
+            
+      </section>
+        
+      {% endblock %}  

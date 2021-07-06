@@ -1,0 +1,40 @@
+
+{% extends "layout.html" %}
+{% block body %}
+      <section>
+        <textarea><pre>
+            <code>
+               
+                int main() 
+                {
+                    int n;
+                    scanf("%d", &n);
+                    int len = n*2 - 1;
+                    for(int i=0;i<len;i++){
+                        for(int j=0;j<len;j++){
+                            int min = i < j ? i : j;
+                            min = min < len-i ? min : len-i-1;
+                            min = min < len-j-1 ? min : len-j-1;
+                            printf("%d ", n-min);
+                        }
+                        printf("\n");
+                    }
+                    return 0;
+                }
+            </code>
+        </pre></textarea>
+        <script src="https://cdn.tiny.cloud/1/255hn1mq0c0kauesd2u4t0yfucajhozuhi4jqweyuw5imt7w/tinymce/5/tinymce.min.js"></script>
+            <script>
+                tinymce.init({
+                    selector: 'textarea',
+                    height: 500,
+                    plugins: 'copy',
+                    toolbar: 'copy',
+                   
+                    
+                });
+            </script>
+            
+      </section>
+        
+      {% endblock %}  

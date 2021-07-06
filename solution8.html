@@ -1,0 +1,38 @@
+
+{% extends "layout.html" %}
+{% block body %}
+      <section>
+        <textarea><pre>
+            <code>
+               
+                int main() {
+    
+                    int n,a,sum=0;
+                    scanf("%d", &n);
+                    //Complete the code to calculate the sum of the five digits on n.
+                    while(n>0)
+                    {
+                     a = n%10;
+                     sum = sum+a;
+                     n = n/10;
+                    }
+                    printf("%d",sum);
+                    return 0;
+                }
+            </code>
+        </pre></textarea>
+        <script src="https://cdn.tiny.cloud/1/255hn1mq0c0kauesd2u4t0yfucajhozuhi4jqweyuw5imt7w/tinymce/5/tinymce.min.js"></script>
+            <script>
+                tinymce.init({
+                    selector: 'textarea',
+                    height: 500,
+                    plugins: 'copy',
+                    toolbar: 'copy',
+                   
+                    
+                });
+            </script>
+            
+      </section>
+        
+      {% endblock %}  
